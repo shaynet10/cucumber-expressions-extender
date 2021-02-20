@@ -1,0 +1,20 @@
+{
+  "name": "cucumber-expression-extender",
+  "version": "1.0.0",
+  "description": "Extends the existing expression variables ease the process of writing feature files",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/@cucumber/cucumber/bin/cucumber-js test"
+  },
+  "keywords": [
+    "cucumber",
+    "tag",
+    "expression",
+    "extend"
+  ],
+  "author": "Shay Gueta",
+  "license": "MIT",
+  "dependencies": {
+    "cucumber": "^7.0.0-rc.0"
+  }
+}
