@@ -10,12 +10,17 @@ Cucumber expressions extender is a simple Cucumber's plugin to extend the tags e
 It helps writing cleaner feature files without complex regular expressions.
 </p>
 <p>Writing something like </p> 
-<p>Given 21-11-2015 is nice</p> 
+```javascript
+Given 21-11-2015 is nice
+```
 <p>can be translated by</p>
-<p> Given('{dd-mm-yy} is nice ' </p>
+```javascript
+Given('{dd-mm-yy} is nice '
+```
 <p> Instead of: </p>
-<p>Given(/^(\d+)\-(\d+)\-(\d+) is nice$/</p>
-
+```javascript
+Given(/^(\d+)\-(\d+)\-(\d+) is nice$/
+```
 
 <a name="Prerequisites"></a>
 <h2> Prerequisites </h2>
