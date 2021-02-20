@@ -1,6 +1,6 @@
 {
   "name": "cucumber-expression-extender",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Extends the existing expression variables ease the process of writing feature files",
   "main": "index.js",
   "scripts": {
