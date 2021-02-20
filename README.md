@@ -72,3 +72,21 @@ And you can use the new step in feature file
 Given 01-02-21 is a nice date
 ```
 
+
+<h2> Supported types </h2> 
+    <table>
+        <thead>
+            <th>expression</th>
+            <th>what is it</th>
+            <th>examples</th>
+        </tead>
+        <tbody>
+        <tr>
+            <td>dd-mm-yy</td>
+            <td>date pattern day(2 digits), month(2 digits), year(2 digits)</td>
+            <td>19-11-89, 19/11/89</td>
+        </tr>
+        </tbody>
+    </table>
+
+    
