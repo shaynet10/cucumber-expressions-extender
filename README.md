@@ -1,8 +1,8 @@
-# cucumber-expressions-extender
+# cucumber-expression-extender
 [Prerequisites](#Prerequisites "Prerequisites") | [Installation](#Installation "Installation") | [Manual](#Manual "Manual")
 
 <p>
-Cucumber expressions extender is a simple Cucumber's plugin to extend the tags expressions for easier feature files writings.
+Cucumber expression extender is a simple Cucumber's plugin to extend the tags expressions for easier feature files writings.
 <p>
 
 <h2> Why </h2>
@@ -40,17 +40,17 @@ Given(/^(\d+)\-(\d+)\-(\d+) is nice$/
 <p>To install the plugin to your project please use:</p>
 
 ```javascript
-npm install cucumber-expressions-extender
+npm install cucumber-expression-extender
 ```
 
 <a name="Manual"></a>
 <h2>Manual</h2>
 <p>
-Once Cucumber expressions extender is installed, </p>
+Once Cucumber expression extender is installed, </p>
 <p> you can require it in your project: </p>
 
 ```javascript
-require('cucumber-expressions-extender');
+require('cucumber-expression-extender');
 ```
 
 <p>
@@ -85,6 +85,21 @@ Given 01-02-21 is a nice date
             <td>dd-mm-yy</td>
             <td>date pattern day(2 digits), month(2 digits), year(2 digits)</td>
             <td>19-11-89, 19/11/89</td>
+        </tr>
+        <tr>
+            <td>mm-dd-yy</td>
+            <td>date pattern month(2 digits), day(2 digits), year(2 digits)</td>
+            <td>11-19-89, 11/19/89</td>
+        </tr>
+        <tr>
+            <td>dd-mm-yyyy</td>
+            <td>date pattern day(2 digits), month(2 digits), year(4 digits)</td>
+            <td>19-11-1989, 19/11/1989</td>
+        </tr>
+        <tr>
+            <td>mm-dd-yyyy</td>
+            <td>date pattern month(2 digits), day(2 digits), year(4 digits)</td>
+            <td>11-19-1989, 11/19/1989</td>
         </tr>
         </tbody>
     </table>
