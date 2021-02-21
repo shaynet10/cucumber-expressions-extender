@@ -1,29 +1,5 @@
 const { defineParameterType } = require('@cucumber/cucumber')
-
-const getFullYear = (year) => {
-    const _year = Number(year);
-    if (_year.toString().length === 4) return _year;
-    if (_year >= 70) return 1900 + _year;
-    return 2000 + _year;
-}
-
-const getDateObject = (day, month, year) => {
-    const date = new Date();
-    date.setDate(day);
-    date.setMonth(Number(month) - 1);
-    date.setYear(getFullYear(year));
-    return date;
-}
-
-const getDate = (val) => {
-    const arr = val.split(/[^\d+]/);
-    return getDateObject(arr[0], arr[1], arr[2]);
-}
-
-const getDateMonthFirst = (val) => {
-    const arr = val.split(/[^\d+]/);
-    return getDateObject(arr[1], arr[0], arr[2]);
-}
+const { getDate, getDateMonthFirst } = require('./transformers');
 
 defineParameterType({ 
     name: 'dd-mm-yy',
@@ -49,6 +25,17 @@ defineParameterType({
     transformer: s => getDateMonthFirst(s)
 });
 
+defineParameterType({ 
+    name: 'non-space',
+    regexp: /[^\s]+/,
+    transformer: s => String(s)
+});
+
+defineParameterType({ 
+    name: 'space',
+    regexp: /\s+/,
+    transformer: s => String(s)
+});
 
 // defineParameterType({ 
 //     name: 'env',
@@ -78,19 +65,6 @@ defineParameterType({
 //     name: 'string-array',
 //     regexp: /([^,]+,)+[^,]+/,
 //     transformer: s => s.split(',')
-// });
-
-
-// defineParameterType({ 
-//     name: 'space',
-//     regexp: /\s+/,
-//     transformer: s => s
-// });
-
-// defineParameterType({ 
-//     name: 'non-space',
-//     regexp: /[^\s]+/,
-//     transformer: s => String(s)
 // });
 
 // defineParameterType({ 

@@ -101,6 +101,11 @@ Given 01-02-21 is a nice date
             <td>date pattern month(2 digits), day(2 digits), year(4 digits)</td>
             <td>11-19-1989, 11/19/1989</td>
         </tr>
+        <tr>
+            <td>non-space</td>
+            <td>any keyboard letters which are not spaces/tabs/new lines</td>
+            <td>312!`,.?;</td>
+        </tr>
         </tbody>
     </table>
 

@@ -1,4 +1,4 @@
-const { getDateObject } = require('../helpers/date');
+const { getDateObject } = require('./helpers/date');
 
 const getDate = (val) => {
     const arr = val.split(/[^\d+]/);
