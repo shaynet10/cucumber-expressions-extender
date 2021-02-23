@@ -10,7 +10,15 @@ const getDateMonthFirst = (val) => {
     return getDateObject(arr[1], arr[0], arr[2]);
 }
 
+const getProcessEnvWithKey = (param) => {
+    const key = param.replace(/^ENV\[\'([^']+)\'\]$/, '$1')
+                    .replace(/^ENV\[\"([^"]+)\"\]$/, '$1');
+    const val = process.env[key] || '';
+    return [val, key];
+}
+
 module.exports = {
     getDate,
-    getDateMonthFirst
+    getDateMonthFirst, 
+    getProcessEnvWithKey
 };

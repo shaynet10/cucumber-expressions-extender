@@ -1,5 +1,5 @@
 const { defineParameterType } = require('@cucumber/cucumber')
-const { getDate, getDateMonthFirst } = require('./transformers');
+const { getDate, getDateMonthFirst, getProcessEnvWithKey } = require('./transformers');
 
 defineParameterType({ 
     name: 'dd-mm-yy',
@@ -37,11 +37,11 @@ defineParameterType({
     transformer: s => String(s)
 });
 
-// defineParameterType({ 
-//     name: 'env',
-//     regexp: /ENV\['[^']+'\]|ENV\["[^"]+"\]/,
-//     transformer: s => process.env[s]
-// });
+defineParameterType({ 
+    name: 'env',
+    regexp: /ENV\['[^']+'\]|ENV\["[^"]+"\]/,
+    transformer: s => getProcessEnvWithKey(s)
+});
 
 // defineParameterType({ 
 //     name: 'json',

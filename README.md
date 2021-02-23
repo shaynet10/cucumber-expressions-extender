@@ -106,6 +106,11 @@ Given 01-02-21 is a nice date
             <td>any keyboard letters which are not spaces/tabs/new lines</td>
             <td>312!`,.?;</td>
         </tr>
+        <tr>
+            <td>env</td>
+            <td>value stored in process.env[KEY]</td>
+            <td>ENV["KEY"] or ENV['KEY']</td>
+        </tr>
         </tbody>
     </table>
 
