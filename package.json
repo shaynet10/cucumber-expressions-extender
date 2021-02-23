@@ -4,7 +4,9 @@
   "description": "Extends the existing expression variables ease the process of writing feature files",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/@cucumber/cucumber/bin/cucumber-js test"
+    "pretest": "mv ./test/test._feature ./test/test.feature",
+    "test": "./node_modules/@cucumber/cucumber/bin/cucumber-js test",
+    "posttest": "mv ./test/test.feature ./test/test._feature"
   },
   "keywords": [
     "cucumber",
