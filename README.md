@@ -111,6 +111,36 @@ Given 01-02-21 is a nice date
             <td>value stored in process.env[KEY]</td>
             <td>ENV["KEY"] or ENV['KEY']</td>
         </tr>
+        <tr>
+            <td>array</td>
+            <td>list of values separated by a comma ","</td>
+            <td>a,b,b,c,!,`</td>
+        </tr>
+        <tr>
+            <td>int-array</td>
+            <td>list of integer values separated by a comma ","</td>
+            <td>1,2,30,6</td>
+        </tr>
+        <tr>
+            <td>base2-array</td>
+            <td>list of base2 (binary) values separated by a comma ","</td>
+            <td>1,001,110,101</td>
+        </tr>
+        <tr>
+            <td>base8-array</td>
+            <td>list of base8 (octal) values separated by a comma ","</td>
+            <td>3,4,57,70</td>
+        </tr>
+        <tr>
+            <td>base16-array</td>
+            <td>list of base16 (hex) values separated by a comma ","</td>
+            <td>4,5,C,FFF</td>
+        </tr>
+        <tr>
+            <td>float-array</td>
+            <td>list of float values separated by a comma ","</td>
+            <td>1.0,2.3,4.3589</td>
+        </tr>
         </tbody>
     </table>
 

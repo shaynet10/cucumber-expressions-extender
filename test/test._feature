@@ -6,4 +6,9 @@ Feature: Test feature
         And 21-10-97 is a nice date
         And 21-10-1935 is a nice date.,45678334211312!!!```,,,...???;;;
         And ENV['aaa'] = ENV["bbb"]
-        
+        And 1,2,3,4,5 is an array
+        And 1,2,3,4,5 is an int array
+        And 101,001,101,110,1 is an int base2 array
+        And 1,2,3,4,57,70 is an int base8 array
+        And 1,2,3,4,5,C,FFF is an int base16 array
+        And 1.0,2.3,3,4,5 is a float array
