@@ -17,6 +17,10 @@ const getProcessEnvWithKey = (param) => {
     return [val, key];
 }
 
+const getBoolean = (value) => {
+    return value.toLowerCase().trim() === 'true';
+}
+
 const getArray = (param, type) => {
     const arr = param.split(/\s*,\s*/);
     if (type === 'int') return arr.map((val) => parseInt(val, 10));
@@ -24,11 +28,14 @@ const getArray = (param, type) => {
     if (type === 'base8') return arr.map((val) => parseInt(val, 8));
     if (type === 'base16') return arr.map((val) => parseInt(val, 16));
     if (type === 'float') return arr.map((val) => parseFloat(val));
+    if (type === 'boolean') return arr.map((val) => getBoolean(val));
     return arr;
 }
 
+
 module.exports = {
     getArray,
+    getBoolean,
     getDate,
     getDateMonthFirst, 
     getProcessEnvWithKey

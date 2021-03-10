@@ -12,3 +12,10 @@ Feature: Test feature
         And 1,2,3,4,57,70 is an int base8 array
         And 1,2,3,4,5,C,FFF is an int base16 array
         And 1.0,2.3,3,4,5 is a float array
+        And true is a valid boolean value
+        And TRUE is a valid boolean value
+        And True is a valid boolean value
+        And false is a valid boolean value
+        And FALSE is a valid boolean value
+        And False is a valid boolean value
+        And true,FALSE,False,TRUE,True,false is a valid boolean array

@@ -36,3 +36,18 @@ Given('{base16-array} is an int base16 array', (values) => {
 Given('{float-array} is a float array', (values) => {
     console.log('array float is: ', values);
 });
+
+Given('{bool} is a valid boolean value', (value) => {
+    console.log('Boolean value is: ', value);
+    if(value) {
+        console.log('It equals to true');
+    } else {
+        console.log('It equals to false');
+    }
+});
+
+Given('{bool-array} is a valid boolean array', (values) => {
+    console.log('array Boolean is: ', values);
+    console.log(`with ${values.filter((v) => !!(v)).length} elements as true`);
+    console.log(`with ${values.filter((v) => !(v)).length} elements as false`);
+});

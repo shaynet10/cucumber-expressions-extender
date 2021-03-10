@@ -1,5 +1,5 @@
 const { defineParameterType } = require('@cucumber/cucumber')
-const { getArray, getDate, getDateMonthFirst, getProcessEnvWithKey } = require('./transformers');
+const { getArray, getBoolean, getDate, getDateMonthFirst, getProcessEnvWithKey } = require('./transformers');
 
 defineParameterType({ 
     name: 'dd-mm-yy',
@@ -85,14 +85,14 @@ defineParameterType({
     transformer: s => getArray(s, 'float')
 });
 
-// defineParameterType({ 
-//     name: 'bool',
-//     regexp: /true|false/i,
-//     transformer: s => Boolean(s.toLowerCase())
-// });
+defineParameterType({ 
+    name: 'bool',
+    regexp: /true|TRUE|True|false|FALSE|False/,
+    transformer: s => getBoolean(s)
+});
 
-// defineParameterType({ 
-//     name: 'bool',
-//     regexp: /true|false/i,
-//     transformer: s => Boolean(s.toLowerCase())
-// });
+defineParameterType({ 
+    name: 'bool-array',
+    regexp: /(((true|TRUE|True|false|FALSE|False),)+(true|TRUE|True|false|FALSE|False))/,
+    transformer: s => getArray(s, 'boolean')
+});

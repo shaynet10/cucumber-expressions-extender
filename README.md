@@ -141,6 +141,16 @@ Given 01-02-21 is a nice date
             <td>list of float values separated by a comma ","</td>
             <td>1.0,2.3,4.3589</td>
         </tr>
+        <tr>
+            <td>bool</td>
+            <td>string value represnting true/false values</td>
+            <td>true or TRUE or True or false or FALSE or False</td>
+        </tr>
+        <tr>
+            <td>bool-array</td>
+            <td>list of boolean values separated by a comma ","</td>
+            <td>true,FALSE,False,TRUE,True,false</td>
+        </tr>
         </tbody>
     </table>
 
