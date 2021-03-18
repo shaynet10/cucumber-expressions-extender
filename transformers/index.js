@@ -33,7 +33,6 @@ const getArray = (param, type) => {
 }
 
 const getJson = (param) => {
-    console.log(`in getJSON "${param}"`);
     let data = '';
     try {
         data = JSON.parse(param);
