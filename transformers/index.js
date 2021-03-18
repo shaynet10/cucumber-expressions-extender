@@ -32,11 +32,33 @@ const getArray = (param, type) => {
     return arr;
 }
 
+const getJson = (param) => {
+    console.log(`in getJSON "${param}"`);
+    let data = '';
+    try {
+        data = JSON.parse(param);
+    } catch(e) {
+        throw new Error(`cannot convert to JSON, 
+        ensure your JSON object is valid. 
+        Ensure keys are in "KEY"
+        Ensure that string values in "VALUE"
+        Some common mistakes in JSON values:
+        {a:1, b:2} isn't valid
+        {"a":1, "b":2} is valid
+        {'a': 'b'} isn't valid
+        {"a": 'b'} isn't valid
+        {"a": "b"} is valid
+        YOUR DATA: ${param}
+        ERROR DATA: ${e.message}`);
+    }
+    return data;
+}
 
 module.exports = {
     getArray,
     getBoolean,
     getDate,
     getDateMonthFirst, 
-    getProcessEnvWithKey
+    getProcessEnvWithKey,
+    getJson
 };

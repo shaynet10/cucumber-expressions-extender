@@ -51,3 +51,9 @@ Given('{bool-array} is a valid boolean array', (values) => {
     console.log(`with ${values.filter((v) => !!(v)).length} elements as true`);
     console.log(`with ${values.filter((v) => !(v)).length} elements as false`);
 });
+
+Given('{json} is a great json object', (value) => {
+    console.log('jsonData: ', value);
+    console.log('jsonData[c]: ', value.c);
+    console.log('jsonData[e]: ', value.e);
+});

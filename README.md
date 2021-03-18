@@ -151,6 +151,13 @@ Given 01-02-21 is a nice date
             <td>list of boolean values separated by a comma ","</td>
             <td>true,FALSE,False,TRUE,True,false</td>
         </tr>
+        <tr>
+            <td>json</td>
+            <td>json structrue to later be converted to object
+            <p><b>ensure you specify a valid JSON data</b></p>
+            </td>
+            <td>{"a":1, "b":2, "c":5, "e":"f"}</td>
+        </tr>
         </tbody>
     </table>
 

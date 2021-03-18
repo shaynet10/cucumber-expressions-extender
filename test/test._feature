@@ -19,3 +19,4 @@ Feature: Test feature
         And FALSE is a valid boolean value
         And False is a valid boolean value
         And true,FALSE,False,TRUE,True,false is a valid boolean array
+        And {"a":1, "b":2, "c":5, "e":"f"} is a great json object
